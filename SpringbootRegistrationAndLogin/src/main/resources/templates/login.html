@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Your content goes here -->
+	
+	<h3>Login Page</h3>
+	
+	<form th:action="@{/loginForm}" th:object="${user}" method = "post">
+	Email: <input type="text" th:field="*{email}"><br><br>
+	Password: <input type="password" th:field="*{password}"><br><br>
+	<input type = "submit" value = "Login">
+	</form>
+	
+	<a href="Register">Registration Page</a><br><br>
+	<a href="index.html">Go to index page</a><br><br>
+	<a th:href="@{/Logout}">Logout</a><br><br>
+	
+	
+</body>
+</html>
